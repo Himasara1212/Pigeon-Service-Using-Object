@@ -3,19 +3,18 @@ package entities;
 public class ItemDto {
 
     private String itemCode;
-    private String supplierId;
-    private String categoryId;
+    private SupplierDto supplier;
+    private CategoryDto category;
     private String description;
     private double unitPrice;
     private int quantity;
 
     ItemDto() {}
 
-    ItemDto(String itemCode,String supplierId,String categoryId,String description,double unitPrice,int quantity) {
-
+    public ItemDto(String itemCode,SupplierDto supplier,CategoryDto category,String description,double unitPrice,int quantity) {
         this.itemCode = itemCode;
-        this.supplierId = supplierId;
-        this.categoryId = categoryId;
+        this.supplier = supplier;
+        this.category = category;
         this.description = description;
         this.unitPrice = unitPrice;
         this.quantity = quantity;
@@ -29,20 +28,20 @@ public class ItemDto {
         this.itemCode = itemCode;
     }
 
-    public String getSupplierId() {
-        return supplierId;
+    public SupplierDto getSupplier() {
+        return supplier;
     }
 
-    public void setSupplierId(String supplierId) {
-        this.supplierId = supplierId;
+    public void setSupplier(SupplierDto supplier) {
+        this.supplier = supplier;
     }
 
-    public String getCategoryId() {
-        return categoryId;
+    public CategoryDto getCategory() {
+        return category;
     }
 
-    public void setCategoryId(String categoryId) {
-        this.categoryId = categoryId;
+    public void setCategory(CategoryDto category) {
+        this.category = category;
     }
 
     public String getDescription() {
@@ -70,11 +69,6 @@ public class ItemDto {
     }
 
     public String toString() {
-        return "Item Code   : " + itemCode +
-               "\nSupplier ID : " + supplierId +
-               "\nCategory ID : " + categoryId +
-               "\nDescription : " + description +
-               "\nUnit Price  : " + unitPrice +
-               "\nQuantity    : " + quantity;
+        return "Item Code   : " + itemCode +"\nSupplier ID : " + supplier +"\nCategory ID : " + category +"\nDescription : " + description +"\nUnit Price  : " + unitPrice +"\nQuantity    : " + quantity;
     }
 }

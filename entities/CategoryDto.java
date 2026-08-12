@@ -2,36 +2,33 @@ package entities;
 
 public class CategoryDto {
 
-    private String id;
-    private String name;
+    private String categoryId;
+    private String categoryName;
 
-    public CategoryDto() {
+    CategoryDto() {}
+
+    public CategoryDto(String categoryId, String categoryName) {
+        this.categoryId = categoryId;
+        this.categoryName = categoryName;
     }
 
-    public CategoryDto(String id, String name) {
-        this.id = id;
-        this.name = name;
+    public String getCategoryId() {
+        return categoryId;
     }
 
-    public String getId() {
-        return id;
+    public void setCategoryId(String categoryId) {
+        this.categoryId = categoryId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public String getCategoryName() {
+        return categoryName;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 
     public String toString() {
-        return "Category ID   : " + id +
-               "\nCategory Name : " + name;
+        return "Category ID   : " + categoryId +"\nCategory Name : " + categoryName;
     }
-    
 }
